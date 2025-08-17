@@ -1,0 +1,375 @@
+html {
+  height: 1500px;
+}
+
+body {
+  background: linear-gradient(180deg, #030611 0%, #091540 100%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  padding: 0;
+  padding-top: 20px;
+  
+}
+
+.main-container {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Light mode background */
+.light-mode body {
+  background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+
+/* Header styles */
+.header-container {
+  background-color: hsl(223, 24%, 17%);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.light-mode .header-container {
+  background-color: white;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode #logo-accent {
+  fill: #091540;
+}
+
+/* Dark/light mode toggle icon */
+#icon {
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  max-height: 50px;
+  max-width: 50px;
+  background-color: hsl(225, 23%, 24%);
+  margin-right: 10px;
+  border-radius: 30%;
+  transition: all 0.3s ease;
+}
+
+#icon:hover {
+  background-color: hsl(226, 24%, 35%);
+}
+
+.light-mode #icon {
+  background-color: hsl(0, 4%, 91%);
+}
+
+.light-mode #icon:hover {
+  background-color: hsl(0, 14%, 93%);
+}
+
+/* Hide toggle checkbox */
+#mode-toggle {
+  display: none;
+}
+
+/* Headline */
+h1 {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.light-mode h1 {
+  color: black;
+}
+
+/* Filter buttons */
+.button-row {
+  width: 100%;
+  min-width: 500px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-buttons {
+ 
+}
+
+.filter-buttons button {
+  background-color: hsl(225, 23%, 24%);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: hsl(3, 71%, 56%);
+  color: hsl(225, 23%, 24%);
+}
+
+.light-mode .filter-buttons button {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .filter-buttons button:hover {
+  background-color: hsl(3, 71%, 56%);
+  color: white;
+}
+
+/* Extensions container */
+#extensions-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 500px;
+  padding: 60px;
+  gap: 16px;
+  margin: 0;
+}
+
+/* Extension card */
+.extension-card {
+  background-color: hsl(223, 24%, 17%);
+  max-width: 380px;
+  min-width: 380px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid hsl(224, 25%, 26%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.light-mode .extension-card {
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Extension layout */
+.extension-logo-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.extension-text {
+  padding: 0 20px;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-top: 5px;
+}
+
+/* Remove button and toggle */
+.button-and-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  color: rgb(255, 255, 255);
+  background: none;
+  padding: 10px 15px;
+  border-width: 1px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: white;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: hsl(3, 71%, 56%);
+  color: rgb(0, 0, 0);
+  border-color: hsl(3, 71%, 56%);
+}
+
+.light-mode .remove-btn {
+  color: black;
+  border-color: hsl(0, 0%, 0%);
+  background: none;
+  padding: 10px 15px;
+  border-width: 1px;
+  border-radius: 20px;
+  border-style: solid;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Toggle switch container */
+.activityToggle {
+  cursor: pointer;
+}
+
+/* Toggle track (background) */
+.activityToggle .slider {
+  width: 40px;
+  height: 20px;
+  background-color: rgb(178, 178, 178);
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Hidden checkbox */
+.activityCheckbox {
+  display: none;
+}
+
+/* Make toggle red when checked */
+.activityToggle input:checked + .slider {
+  background-color: hsl(0, 100%, 50%);
+}
+
+/* Slider knob */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+/* Move knob when checked */
+.activityToggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-container {
+    background-color: hsl(223, 24%, 17%);
+    width: 330px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    border-radius: 15px;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  #icon {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+  }
+
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  #extensions-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-width: 375px;
+  }
+
+  .extension-card {
+    max-width: 70%;
+    padding: 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .extension-logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    padding-top: 0;
+  }
+  
+  .extension-logo-text img {
+    padding: 0;
+    margin-top: 20px;
+    height: 60px;
+  }
+
+
+
+  .extension-text {
+    width: 80%;
+    padding: 0;
+    padding-right: 0;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  .extension-text p {
+    width: 230px;
+  }
+
+  .button-and-toggle {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
