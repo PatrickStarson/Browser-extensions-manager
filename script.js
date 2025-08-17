@@ -25,10 +25,10 @@ toggle.addEventListener('change', () => {
   document.documentElement.classList.toggle('light-mode');
 
   if (document.documentElement.classList.contains('light-mode')) {
-    icon.innerHTML = '<img src="/assets/images/icon-sun.svg" alt="light mode">';
+    icon.innerHTML = '<img src="assets/images/icon-sun.svg" alt="light mode">';
     localStorage.setItem('theme', 'light');
   } else {
-    icon.innerHTML = '<img src="/assets/images/icon-moon.svg" alt="dark mode">';
+    icon.innerHTML = '<img src="assets/images/icon-moon.svg" alt="dark mode">';
     localStorage.setItem('theme', 'dark');
   }
 });
