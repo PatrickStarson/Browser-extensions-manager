@@ -9,13 +9,13 @@ body {
   font-family: "Noto Sans", sans-serif;
   padding: 0;
   padding-top: 20px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-container {
   max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Light mode background */
@@ -26,8 +26,9 @@ body {
 /* Header styles */
 .header-container {
   background-color: hsl(223, 24%, 17%);
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1787px;
+  min-width: 490px;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,14 +130,16 @@ h1 {
 }
 
 /* Extensions container */
+
 #extensions-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 1730px;
   min-width: 500px;
-  padding: 60px;
+  padding: 60px 0px;
   gap: 16px;
   margin: 0;
+  translate: 0px;
 }
 
 /* Extension card */
@@ -262,13 +265,23 @@ p {
 
 @media screen and (max-width: 375px) {
   body {
+    margin: 0;
+    width: 375px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  main {
+    width: 375px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .main-container {
-    max-width: 100%;
+    width: 375px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -278,14 +291,15 @@ p {
   }
   .header-container {
     background-color: hsl(223, 24%, 17%);
-    width: 330px;
-    margin: 0 auto;
+    width: 350px;
+    min-width: unset;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
     border-radius: 15px;
-    margin: 0;
+
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -305,7 +319,8 @@ p {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    
+    max-width: 375px;
+    min-width: unset;
   }
 
   h1 {
@@ -321,18 +336,18 @@ p {
   }
 
   #extensions-container {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
     max-width: 375px;
+    min-width: 375px;
+    padding: 0;
   }
 
   .extension-card {
-    max-width: 70%;
+    max-width: 340px;
+    min-width: 340px;
     padding: 0;
-  
     display: flex;
     flex-direction: column;
     justify-content: center;

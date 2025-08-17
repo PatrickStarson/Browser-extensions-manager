@@ -12,11 +12,11 @@ window.addEventListener('DOMContentLoaded', () => {
   if (savedTheme === 'light') {
     document.documentElement.classList.add('light-mode');
     toggle.checked = true;
-    icon.innerHTML = `<img src="/assets/images/icon-sun.svg" alt="light mode" />`;
+    icon.innerHTML = `<img src="assets/images/icon-sun.svg" alt="light mode" />`;
   } else {
     document.documentElement.classList.remove('light-mode');
     toggle.checked = false;
-    icon.innerHTML = `<img src="/assets/images/icon-moon.svg" alt="dark mode" />`;
+    icon.innerHTML = `<img src="assets/images/icon-moon.svg" alt="dark mode" />`;
   }
 });
 
